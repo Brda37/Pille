@@ -9,8 +9,23 @@
     <string name="NombreR">Nombre</string>
     <string name="CorreoR">Correo electrónico</string>
     <string name="contrasenaR">Contraseña</string>
-    <string name="ConfirmarContraseñaR">Confirmar contraseña</string>
+    <string name="ConfirmarContrasenaR">Confirmar contraseña</string>
     <string name="RegistrarR">REGISTRAR</string>
     <string name="TengounaCuentaTxt">Tengo una Cuenta</string>
+
+    <!--Menu principal-->
+    <string name="cerrarsesion">Cerrar sesión</string>
+
+    <!--Actividad Login-->
+    <string name="Iniciarsesion">Iniciar sesión</string>
+    <string name="Correol">Correo electrónico</string>
+    <string name="contrasenaL">Contraseña</string>
+    <string name="Btn_login">Ingresar</string>
+    <string name="Btn_nuevo">¿No tienes cuenta? Registrate</string>
+
+    <!--Manu Principañ-->
+    <string name="BienvenidoPrincipal">Bienvenido(a)</string>
+    <string name="nombresprincipal"> -- </string>
+    <string name="correoprincipal"> -- </string>
 
 </resources>

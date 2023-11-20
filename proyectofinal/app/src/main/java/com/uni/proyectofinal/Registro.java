@@ -1,7 +1,6 @@
 package com.uni.proyectofinal;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -25,28 +24,23 @@ import java.util.HashMap;
 
 public class Registro extends AppCompatActivity {
 
-    EditText NombreR, CorreoR, contrasenaR, ConfirmarContraseñaR;
+    EditText NombreR, CorreoR, contrasenaR, ConfirmarContrasenaR;
     Button RegistrarR;
     TextView TengounaCuentaTxt;
     FirebaseAuth firebaseAuth;
     ProgressDialog progressDialog;
     DatabaseReference databaseReference;
-    String nombre = "", correo = "", password = "", conrmacionpassword = "";
+    String nombre = "", correo = "", password = "", Confirmarpassword = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Registrar");
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
-
         NombreR = findViewById(R.id.NombreR);
         CorreoR = findViewById(R.id.CorreoR);
         contrasenaR = findViewById(R.id.contrasenaR);
-        ConfirmarContraseñaR = findViewById(R.id.ConfirmarContraseñaR);
+        ConfirmarContrasenaR = findViewById(R.id.ConfirmarContrasenaR);
         RegistrarR = findViewById(R.id.RegistrarR);
         TengounaCuentaTxt = findViewById(R.id.TengounaCuentaTxt);
 
@@ -75,7 +69,7 @@ public class Registro extends AppCompatActivity {
         nombre = NombreR.getText().toString();
         correo = CorreoR.getText().toString();
         password = contrasenaR.getText().toString();
-        conrmacionpassword = ConfirmarContraseñaR.getText().toString();
+        Confirmarpassword = ConfirmarContrasenaR.getText().toString();
 
         if(TextUtils.isEmpty(nombre)){
             Toast.makeText(this, "Ingrese nombre", Toast.LENGTH_SHORT).show();
@@ -83,10 +77,10 @@ public class Registro extends AppCompatActivity {
             Toast.makeText(this, "Ingrese correo", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Ingrese contraseña", Toast.LENGTH_SHORT).show();
-        }else if (TextUtils.isEmpty(conrmacionpassword)) {
+        }else if (TextUtils.isEmpty(Confirmarpassword)) {
             Toast.makeText(this, "Confirme contraseña", Toast.LENGTH_SHORT).show();
         }
-        else if(!password.equals(ConfirmarContraseñaR)){
+        else if(!password.equals(Confirmarpassword)){
             Toast.makeText(this, "La contraseña no es igual", Toast.LENGTH_SHORT).show();
         }
         else{
@@ -96,6 +90,7 @@ public class Registro extends AppCompatActivity {
     private void crearcuenta() {
         progressDialog.setMessage("Creando su cuenta...");
         progressDialog.show();
+
 
         //crear usuario en Firebase
 
