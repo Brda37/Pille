@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Proyecto final</string>
+    <!--MAIN ACTIVITY-->
+    <string name="Btn_Login">Login</string>
+    <string name="Btn_Registro">Registrate</string>
+
+    <!--MAIN REGISTER-->
+    <string name="CrearCuenta">Crear Cuenta</string>
+    <string name="NombreR">Nombre</string>
+    <string name="CorreoR">Correo electrónico</string>
+    <string name="contrasenaR">Contraseña</string>
+    <string name="ConfirmarContraseñaR">Confirmar contraseña</string>
+    <string name="RegistrarR">REGISTRAR</string>
+    <string name="TengounaCuentaTxt">Tengo una Cuenta</string>
+
+</resources>
